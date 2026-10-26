@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#971b32">
+  <meta name="description" content="JS Blood Bank helps people connect with blood donation services, donor registration, appointment enquiries, and blood availability information.">
+  <title>JS Blood Bank | Give Blood. Give Hope.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MedicalOrganization",
+    "name":"JS Blood Bank",
+    "description":"Blood donation services, donor registration and blood availability enquiries.",
+    "medicalSpecialty":"BloodBank"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-notice"><span class="demo-dot"></span> DEMO WEBSITE · Availability figures are illustrative, not live medical inventory</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="JS Blood Bank home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 48"><path d="M20 3C16 12 6 22 6 30a14 14 0 0 0 28 0C34 22 24 12 20 3Z" fill="currentColor"/><path d="M13 30c0 5 3 8 7 9" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+      <span><strong>JS <b>Blood Bank</b></strong><small>GIVE BLOOD. GIVE HOPE.</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+    <nav id="primary-nav" class="nav">
+      <a href="#availability">Blood availability</a><a href="#donate">Become a donor</a><a href="#how">How it works</a><a href="#contact">Contact</a>
+      <a class="nav-cta" href="#appointment">Book appointment <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="eyebrow-line"></span> EVERY DONATION MATTERS</div>
+        <h1>One donation.<br><em>Many more</em><br>tomorrows.</h1>
+        <p class="hero-lead">A little of your time can make a life-changing difference. Find blood information, register as a donor, or connect with our team.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#availability">Find blood <span>↗</span></a>
+          <a class="btn btn-secondary" href="#donate">Become a donor</a>
+        </div>
+        <div class="trust-row"><span class="trust-icon">✓</span><span>Compassionate care</span><i></i><span>Donor-first approach</span></div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-photo" role="img" aria-label="Healthcare professional assisting a voluntary blood donor"></div>
+        <div class="photo-shade"></div>
+        <div class="hero-quote"><span class="quote-mark">“</span><p>Be the reason<br>someone gets<br>another chance.</p><span class="quote-rule"></span><small>THE POWER OF GIVING</small></div>
+        <div class="floating-card"><span class="floating-icon">♡</span><div><strong>Give with heart.</strong><small>Every eligible donor counts.</small></div></div>
+        <div class="visual-index">01 <span></span> CARE THAT CONNECTS</div>
+      </div>
+    </section>
+
+    <section class="quick-strip" aria-label="Quick actions">
+      <a href="#availability"><span class="quick-icon">⌕</span><span><strong>Need blood?</strong><small>Check groups & enquire</small></span><b>↗</b></a>
+      <a href="#donate"><span class="quick-icon">♡</span><span><strong>Give blood</strong><small>Start your donor journey</small></span><b>↗</b></a>
+      <a href="#appointment"><span class="quick-icon">＋</span><span><strong>Book a visit</strong><small>Request an appointment</small></span><b>↗</b></a>
+    </section>
+
+    <section class="section section-wrap availability-section" id="availability">
+      <div class="section-heading reveal">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> BLOOD GROUP DIRECTORY</div><h2>Find what’s<br><em>needed most.</em></h2></div>
+        <div class="heading-aside"><p>Explore blood groups and submit an enquiry. For urgent needs, please contact the blood bank directly to confirm current availability.</p><span class="data-label"><span></span> SAMPLE DATA — NOT LIVE</span></div>
+      </div>
+      <div class="inventory-toolbar reveal">
+        <div class="blood-tabs" role="group" aria-label="Filter by blood group">
+          <button class="blood-tab active" data-group="all" aria-pressed="true">All groups</button>
+          <button class="blood-tab" data-group="A+" aria-pressed="false">A+</button><button class="blood-tab" data-group="A-" aria-pressed="false">A−</button>
+          <button class="blood-tab" data-group="B+" aria-pressed="false">B+</button><button class="blood-tab" data-group="B-" aria-pressed="false">B−</button>
+          <button class="blood-tab" data-group="AB+" aria-pressed="false">AB+</button><button class="blood-tab" data-group="AB-" aria-pressed="false">AB−</button>
+          <button class="blood-tab" data-group="O+" aria-pressed="false">O+</button><button class="blood-tab" data-group="O-" aria-pressed="false">O−</button>
+        </div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="blood-search" type="search" placeholder="Search blood group" aria-label="Search blood group"></label>
+      </div>
+      <div class="blood-grid" id="blood-grid">
+        <article class="blood-card reveal" data-blood="A+"><div class="blood-card-top"><span class="blood-type">A<sup>+</sup></span><span class="status status-neutral">Sample</span></div><h3>A Positive</h3><p>Enquire about current requirements or availability.</p><button class="text-link request-group" data-group="A+">Enquire about A+ <span>↗</span></button></article>
+        <article class="blood-card reveal" data-blood="A-"><div class="blood-card-top"><span class="blood-type">A<sup>−</sup></span><span class="status status-neutral">Sample</span></div><h3>A Negative</h3><p>Enquire about current requirements or availability.</p><button class="text-link request-group" data-group="A-">Enquire about A− <span>↗</span></button></article>
+        <article class="blood-card reveal" data-blood="B+"><div class="blood-card-top"><span class="blood-type">B<sup>+</sup></span><span class="status status-neutral">Sample</span></div><h3>B Positive</h3><p>Enquire about current requirements or availability.</p><button class="text-link request-group" data-group="B+">Enquire about B+ <span>↗</span></button></article>
+        <article class="blood-card reveal" data-blood="B-"><div class="blood-card-top"><span class="blood-type">B<sup>−</sup></span><span class="status status-neutral">Sample</span></div><h3>B Negative</h3><p>Enquire about current requirements or availability.</p><button class="text-link request-group" data-group="B-">Enquire about B− <span>↗</span></button></article>
+        <article class="blood-card reveal" data-blood="AB+"><div class="blood-card-top"><span class="blood-type">AB<sup>+</sup></span><span class="status status-neutral">Sample</span></div><h3>AB Positive</h3><p>Enquire about current requirements or availability.</p><button class="text-link request-group" data-group="AB+">Enquire about AB+ <span>↗</span></button></article>
+        <article class="blood-card reveal" data-blood="AB-"><div class="blood-card-top"><span class="blood-type">AB<sup>−</sup></span><span class="status status-neutral">Sample</span></div><h3>AB Negative</h3><p>Enquire about current requirements or availability.</p><button class="text-link request-group" data-group="AB-">Enquire about AB− <span>↗</span></button></article>
+        <article class="blood-card reveal" data-blood="O+"><div class="blood-card-top"><span class="blood-type">O<sup>+</sup></span><span class="status status-neutral">Sample</span></div><h3>O Positive</h3><p>Enquire about current requirements or availability.</p><button class="text-link request-group" data-group="O+">Enquire about O+ <span>↗</span></button></article>
+        <article class="blood-card reveal" data-blood="O-"><div class="blood-card-top"><span class="blood-type">O<sup>−</sup></span><span class="status status-neutral">Sample</span></div><h3>O Negative</h3><p>Enquire about current requirements or availability.</p><button class="text-link request-group" data-group="O-">Enquire about O− <span>↗</span></button></article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No matching blood groups. Try another search.</p>
+      <div class="availability-note"><span>i</span><p><strong>Important:</strong> This demo does not connect to a live blood inventory. Availability, compatibility and transfusion decisions must be confirmed by qualified blood bank staff.</p></div>
+    </section>
+
+    <section class="need-banner">
+      <div class="need-orb" aria-hidden="true"><span>♥</span></div>
+      <div class="need-copy"><div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> HELP WHERE IT MATTERS</div><h2>Some blood groups<br>may be needed <em>today.</em></h2><p>When the blood bank confirms a shortage, share the verified requirement with your community. Every request deserves accurate information.</p></div>
+      <a class="btn btn-light" href="#appointment">Send an enquiry <span>↗</span></a>
+    </section>
+
+    <section class="section section-wrap donor-section" id="donate">
+      <div class="donor-image reveal" role="img" aria-label="Indian voluntary blood donor at a donation centre"><div class="image-caption"><span>01 / GIVE HOPE</span><p>Your choice to give<br>can mean so much.</p></div></div>
+      <div class="donor-copy reveal"><div class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT GOOD THING</div><h2>Be there for<br><em>someone.</em></h2><p>Voluntary blood donors are an important part of a stronger community. Register your interest and our team can guide you through the next steps.</p>
+        <ul class="check-list"><li><span>✓</span> Get guidance from the blood bank team</li><li><span>✓</span> Ask about upcoming donation camps</li><li><span>✓</span> Confirm eligibility with qualified staff</li></ul>
+        <a href="#appointment" class="btn btn-primary">Register your interest <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="section process-section" id="how">
+      <div class="section-wrap"><div class="section-heading reveal"><div><div class="eyebrow"><span class="eyebrow-line"></span> SIMPLE, HUMAN, HELPFUL</div><h2>Giving starts<br><em>with a step.</em></h2></div><p class="heading-aside">Our team can help you understand the process and connect with the right service.</p></div>
+        <div class="process-grid">
+          <article class="process-card reveal"><span class="process-no">01</span><div class="process-icon">↗</div><h3>Reach out</h3><p>Tell us whether you want to donate, enquire about a blood group, or book a visit.</p></article>
+          <article class="process-card reveal"><span class="process-no">02</span><div class="process-icon">♡</div><h3>Get guidance</h3><p>Our team can explain next steps, appointment details and donor eligibility checks.</p></article>
+          <article class="process-card reveal"><span class="process-no">03</span><div class="process-icon">✳</div><h3>Make an impact</h3><p>Follow the guidance of qualified staff and help support safe, responsible donation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-wrap appointment-section" id="appointment">
+      <div class="appointment-intro reveal"><div class="eyebrow"><span class="eyebrow-line"></span> WE’RE HERE TO HELP</div><h2>Let’s make<br><em>the connection.</em></h2><p>Request a donor appointment or send a blood availability enquiry. This demo opens WhatsApp with your details for you to review and send.</p>
+        <div class="contact-mini"><span class="contact-mini-icon">✆</span><div><small>Prefer to speak?</small><strong>Call the blood bank</strong><a href="#" data-phone-link class="config-phone">Add verified phone number</a></div></div>
+      </div>
+      <form class="appointment-form reveal" id="appointment-form">
+        <div class="form-top"><span>APPOINTMENT & ENQUIRY</span><span class="form-step">01 — 01</span></div>
+        <h3>How can we help you?</h3>
+        <p class="form-description">Fields marked * are required.</p>
+        <div class="form-grid">
+          <label>Full name *<input name="name" autocomplete="name" required placeholder="Your full name"></label>
+          <label>Phone number *<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9+() -]{8,18}" placeholder="+91 9XXXXXXXXX"></label>
+          <label>I'm here to *<select name="purpose" required><option value="">Choose an option</option><option>Donate blood</option><option>Enquire about blood availability</option><option>Book an appointment</option><option>Ask about a donation camp</option></select></label>
+          <label>Blood group<select name="bloodGroup" id="form-blood-group"><option value="">Select if known</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option><option>Not sure</option></select></label>
+          <label class="full-field">Preferred date<input name="date" type="date" id="preferred-date"></label>
+          <label class="full-field">Additional details<textarea name="message" rows="3" placeholder="Share any helpful details (please don't include sensitive medical records)."></textarea></label>
+        </div>
+        <button class="btn btn-primary form-submit" type="submit">Continue on WhatsApp <span>↗</span></button>
+        <p class="privacy-note">Your details are placed into a WhatsApp message for your review. Nothing is sent automatically by this demo.</p>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="contact-section" id="contact"><div class="section-wrap contact-layout">
+      <div><div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> FIND US / TALK TO US</div><h2>Here for the<br><em>community.</em></h2><p>Contact our team to confirm services, current blood availability, opening hours and directions.</p>
+        <div class="contact-links"><a href="#" data-phone-link><span>☎</span><div><small>PHONE</small><strong class="config-phone">Add verified phone number</strong></div><b>↗</b></a><a href="#" data-wa-link><span>◉</span><div><small>WHATSAPP</small><strong>Message our team</strong></div><b>↗</b></a><a href="#" data-map-link><span>⌖</span><div><small>LOCATION</small><strong class="config-address">Add verified address</strong></div><b>↗</b></a></div>
+      </div>
+      <div class="map-card"><div class="map-art" aria-hidden="true"><div class="map-road road-one"></div><div class="map-road road-two"></div><div class="map-road road-three"></div><div class="map-pin">♥</div><div class="map-label">JS BLOOD BANK <small>LOCATION PREVIEW</small></div></div><div class="map-bottom"><div><strong>Visit JS Blood Bank</strong><small>Replace this preview with your verified address.</small></div><a href="#" data-map-link aria-label="Get directions">↗</a></div></div>
+    </div></section>
+
+    <section class="final-cta section-wrap"><div class="cta-heart">♥</div><div><div class="eyebrow"><span class="eyebrow-line"></span> A COMMUNITY THAT CARES</div><h2>One act of kindness<br>can travel <em>so far.</em></h2></div><a href="#donate" class="btn btn-primary">Take the first step <span>↗</span></a></section>
+  </main>
+
+  <footer class="footer"><div class="footer-main"><a class="brand brand-footer" href="#home"><span class="brand-mark"><svg viewBox="0 0 40 48" aria-hidden="true"><path d="M20 3C16 12 6 22 6 30a14 14 0 0 0 28 0C34 22 24 12 20 3Z" fill="currentColor"/><path d="M13 30c0 5 3 8 7 9" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg></span><span><strong>JS <b>Blood Bank</b></strong><small>GIVE BLOOD. GIVE HOPE.</small></span></a><p>Built around care, community and the power of giving.</p><div class="footer-nav"><a href="#availability">Blood groups</a><a href="#donate">Donate</a><a href="#appointment">Appointments</a><a href="#contact">Contact</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> JS Blood Bank · Demo website concept by JSVisuals</span><span>For emergencies, contact local emergency services and qualified medical professionals.</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
